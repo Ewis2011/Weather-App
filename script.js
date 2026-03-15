@@ -12,8 +12,6 @@ const humidity = document.getElementById("humidity");
 
 const API_KEY = "4QVZX2BG45CSQ5AAT9ZJSA7RQ";
 
-
-// Fetch weather
 async function getWeather(location, unit) {
 
 try {
@@ -39,8 +37,6 @@ console.error("Error fetching weather:", error);
 
 }
 
-
-// Process JSON
 function processWeather(data) {
 
 return {
@@ -52,8 +48,6 @@ condition: data.currentConditions.conditions
 
 }
 
-
-// Display weather
 function displayWeather(weather) {
 
 cityName.textContent = weather.city;
@@ -67,8 +61,6 @@ changeBackground(weather.condition);
 
 }
 
-
-// Change background depending on weather
 function changeBackground(condition) {
 
 const body = document.body;
@@ -92,8 +84,6 @@ body.classList.add("sunny");
 
 }
 
-
-// Form submit
 form.addEventListener("submit", (e) => {
 
 e.preventDefault();
